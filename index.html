@@ -1,124 +1,244 @@
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>N452 XBR | Toyota Celica GT-Four ST205</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #111;
-      color: #fff;
-      line-height: 1.6;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Celica GT-Four ST205 | N452 XBR</title>
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: #1a1d24;
+            --accent-color: #d32f2f;
+            --text-main: #f0f0f0;
+            --text-muted: #a0a0a0;
+        }
 
-    header {
-      padding: 70px 20px;
-      text-align: center;
-      background: #1b1b1b;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
 
-    h1 {
-      font-size: 3rem;
-      margin: 0;
-      letter-spacing: 4px;
-    }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    h2 {
-      font-weight: normal;
-      color: #ccc;
-    }
+        /* Hero Header */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 380px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(15, 17, 21, 1)), url('images/hero1.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+            padding-bottom: 2rem;
+        }
 
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
-    }
+        .hero-title h1 {
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-    section {
-      margin: 50px 0;
-    }
+        .hero-title p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
 
-    .card {
-      background: #1b1b1b;
-      padding: 25px;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
+        /* Container & Specs */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #888;
-    }
-  </style>
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .spec-card {
+            background: var(--card-bg);
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 1px solid #2a2d36;
+        }
+
+        .spec-card .label {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        .spec-card .value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        /* Featured Split */
+        .hero-secondary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #2a2d36;
+            margin-bottom: 3rem;
+        }
+
+        .hero-secondary img {
+            width: 100%;
+            height: 100%;
+            min-height: 250px;
+            object-fit: cover;
+        }
+
+        .hero-secondary-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Gallery Grid */
+        .section-header {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            margin: 3rem 0 1.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #2a2d36;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+            border-color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title h1 { font-size: 2rem; }
+            .hero-secondary { grid-template-columns: 1fr; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #2a2d36;
+            margin-top: 4rem;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <h1>N452 XBR</h1>
-  <h2>1995 Toyota Celica GT-Four ST205</h2>
-</header>
+    <header class="hero">
+        <div class="hero-title">
+            <h1>Toyota Celica GT-Four</h1>
+            <p>ST205 — N452 XBR</p>
+        </div>
+    </header>
 
-<main>
+    <main class="container">
 
-<section>
-  <h2>The Car</h2>
-  <div class="card">
-    <p>
-      Welcome to the story of N452 XBR — a 1995 Toyota Celica
-      GT-Four ST205.
-    </p>
+        <div class="specs-grid">
+            <div class="spec-card">
+                <div class="label">Model</div>
+                <div class="value">ST205 GT-Four</div>
+            </div>
+            <div class="spec-card">
+                <div class="label">Engine</div>
+                <div class="value">3S-GTE Turbo</div>
+            </div>
+            <div class="spec-card">
+                <div class="label">Drivetrain</div>
+                <div class="value">Full-Time AWD</div>
+            </div>
+            <div class="spec-card">
+                <div class="label">Registration</div>
+                <div class="value">N452 XBR</div>
+            </div>
+        </div>
 
-    <p>
-      This website documents the car, its rally heritage,
-      its restoration and its journey back to the road.
-    </p>
-  </div>
-</section>
+        <div class="hero-secondary">
+            <img src="images/hero2.jpg" alt="Toyota Celica GT-Four N452 XBR">
+            <div class="hero-secondary-content">
+                <h2>Build & Restoration Archive</h2>
+                <p style="color: var(--text-muted); margin-top: 0.5rem;">
+                    Documenting the restoration, mechanics, and ongoing build history of N452 XBR.
+                </p>
+            </div>
+        </div>
 
-<section>
-  <h2>The Restoration</h2>
-  <div class="card">
-    <p>
-      An extensive restoration brought this ST205 back to life.
-      The photographs and videos documenting that process will
-      be added here.
-    </p>
-  </div>
-</section>
+        <div class="section-header">
+            <h2>Photo Gallery</h2>
+        </div>
 
-<section>
-  <h2>Rally Heritage</h2>
-  <div class="card">
-    <p>
-      The ST205 GT-Four is one of Toyota's most iconic
-      rally-bred road cars.
-    </p>
-  </div>
-</section>
+        <div class="gallery-grid" id="gallery">
+            <p id="loading-text" style="color: var(--text-muted);">Loading photo archive...</p>
+        </div>
 
-<section>
-  <h2>Gallery</h2>
-  <div class="card">
-    <p>Restoration photographs coming soon.</p>
-  </div>
-</section>
+    </main>
 
-<section>
-  <h2>Videos</h2>
-  <div class="card">
-    <p>Videos coming soon.</p>
-  </div>
-</section>
+    <footer>
+        <p>&copy; N452XBR.co.uk — Toyota Celica GT-Four ST205 Build Archive</p>
+    </footer>
 
-</main>
+    <!-- Auto Load Gallery Script -->
+    <script>
+        const repoUser = 'jscwisher-design';
+        const repoName = 'N452XBR';
+        const galleryContainer = document.getElementById('gallery');
+        const loadingText = document.getElementById('loading-text');
 
-<footer>
-  N452 XBR · Toyota Celica GT-Four ST205
-</footer>
+        fetch(`https://api.github.com/repos/${repoUser}/${repoName}/contents/images`)
+            .then(response => response.json())
+            .then(data => {
+                loadingText.remove();
+                data.forEach(file => {
+                    // Filter out non-image files and hero images
+                    if (file.type === 'file' && 
+                        file.name.match(/\.(jpe?g|png|gif|webp)$/i) && 
+                        !file.name.includes('hero1') && 
+                        !file.name.includes('hero2')) {
+                        
+                        const img = document.createElement('img');
+                        img.src = file.download_url;
+                        img.alt = 'Toyota Celica GT-Four N452 XBR Photo';
+                        img.loading = 'lazy';
+                        galleryContainer.appendChild(img);
+                    }
+                });
+            })
+            .catch(error => {
+                loadingText.innerText = 'Unable to load photo gallery automatically.';
+                console.error(error);
+            });
+    </script>
 
 </body>
 </html>
